@@ -4,7 +4,9 @@
   "description": "Collaborative Whiteboard App",
   "main": "index.js",
   "scripts": {
-    "test": "mocha client/spec/helpers/.setup.js **/*.spec.js"
+    "test": "mocha client/spec/helpers/.setup.js **/*.spec.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -43,9 +45,11 @@
     "react-bootstrap": "^0.30.6",
     "react-dom": "^0.14.7",
     "react-overlays": "^0.6.10",
-    "socket.io": "^1.5.0"
+    "socket.io": "^1.5.0",
+    "snyk": "^1.189.0"
   },
   "engines": {
     "node": ">=7.0.0"
-  }
+  },
+  "snyk": true
 }
